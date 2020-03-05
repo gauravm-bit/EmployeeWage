@@ -1,2 +1,3 @@
-echo "hello"
+#!/bin/bash -x 
+echo "welcome to employee message"
 
