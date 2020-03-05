@@ -2,9 +2,15 @@
 wagePerHour=20
 
 echo "Welcome to Employee wage problem"
+maxHours=100
+maxDays=20
+totalHours=0
+totalDays=0
 
-for (( day=1; day<=20; day++ ))
+while [[ $totalHours -lt $maxHours &&
+			$totalDays -lt $maxDays ]] 
 do
+	((totalDays++))
 	randomCheck=$(( RANDOM%3 ))
 	case $randomCheck in
 		0)echo "Employee is absent"
@@ -17,7 +23,8 @@ do
 		empHour=4
 		;;
 	esac
+	totalHours=$(( $totalHours+$empHour ))
 	salary=$(( $wagePerHour*$empHour ))
- 	totalSalary=$(( $totalSalary +$salary ))
+ 	totalSalary=$(( $totalSalary+$salary ))
 done
 echo "Monthly wage is "$totalSalary
