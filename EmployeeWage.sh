@@ -1,5 +1,4 @@
 #!/bin/bash -x
-
 wagePerHour=20
 randomCheck=$(( RANDOM%3 ))
 
@@ -12,9 +11,12 @@ elif [[ $randomCheck == 2 ]]
 then
 	empHour=4
 	echo "Employee is present and parttime"
+	empHour=8
+	echo "Employee is present"
 else
 	empHour=0
 	echo "Employee is absent"
 fi
 dailyWage=$(( $wagePerHour * $empHour ))
+dailyWage=$(( $wagePerHour*$empHour ))
 echo "Dailywage is  :" $dailyWage
