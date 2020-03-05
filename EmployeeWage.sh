@@ -11,8 +11,6 @@ elif [[ $randomCheck == 2 ]]
 then
 	empHour=4
 	echo "Employee is present and parttime"
-	empHour=8
-	echo "Employee is present"
 else
 	empHour=0
 	echo "Employee is absent"
