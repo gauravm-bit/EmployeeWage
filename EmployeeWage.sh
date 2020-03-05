@@ -1,2 +1,2 @@
-echo "hello"
+echo "Welcome to Employee wage problem"
 
